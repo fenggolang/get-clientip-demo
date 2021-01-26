@@ -19,5 +19,6 @@ func getClientRealIP(w http.ResponseWriter,r *http.Request) {
 	if ip == ""{
 		ip = exnet.ClientIP(r)
 	}
+	fmt.Println("客户端真实ip是：",ip)
 	w.Write([]byte(ip))
 }
